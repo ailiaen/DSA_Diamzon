@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<section class="profile-section">
+    <div class="profile-card" style="text-align: center;">
+        <img src="{{ url_for('static', filename='images/placeholder_profile.jpg') }}" alt="Profile" class="profile-img">
+        <h2>about me</h2>
+        <p style="text-indent: 2em;">
+            hi there! ♡<br>
+            Name: Abigail Diamzon<br>
+            Nickname: Lia <br>
+            Age: 18<br>
+            City: Binangonan<br>
+            Section: BSCpE 2-3<br>
+            Subject: Data Structures and Algorithms
+        </p>
+    </div>
+</section>
+{% endblock %}
