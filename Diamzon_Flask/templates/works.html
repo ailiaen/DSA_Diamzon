@@ -8,31 +8,39 @@
 
     <div class="tool-box">
         <h3>uppercase converter</h3>
-        <form method="POST">
-            <input type="hidden" name="operation" value="uppercase">
-            <input type="text" name="text" placeholder="type something..." required>
-            <button type="submit">convert</button>
-        </form>
+        <a href="{{ url_for('touppercase') }}">
+            <button type="button">open 💌</button>
+        </a>
     </div>
 
     <div class="tool-box">
         <h3>area of a circle</h3>
-        <form method="POST">
-            <input type="hidden" name="operation" value="circle">
-            <input type="number" step="any" name="radius" placeholder="radius" required>
-            <button type="submit">calculate</button>
-        </form>
+        <a href="{{ url_for('areaofcircle') }}">
+            <button type="button">open 💌</button>
+        </a>
     </div>
 
     <div class="tool-box">
         <h3>area of a triangle</h3>
-        <form method="POST">
-            <input type="hidden" name="operation" value="triangle">
-            <input type="number" step="any" name="base" placeholder="base" required>
-            <input type="number" step="any" name="height" placeholder="height" required>
-            <button type="submit">calculate</button>
-        </form>
+        <a href="{{ url_for('areaoftriangle') }}">
+            <button type="button">open 💌</button>
+        </a>
     </div>
+
+    <div class="tool-box">
+    <h3>linked list creator</h3>
+    <a href="{{ url_for('linkedlist') }}">
+        <button type="button">open 💌</button>
+    </a>
+</div>
+
+<div class="tool-box">
+    <h3>infix → postfix converter</h3>
+    <a href="{{ url_for('infixpostfix') }}">
+        <button type="button">open 💌</button>
+    </a>
+</div>
+
 
     {% if result is not none %}
     <div class="result-box">
@@ -42,3 +50,4 @@
 
 </section>
 {% endblock %}
+
