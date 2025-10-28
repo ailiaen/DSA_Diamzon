@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-<body>
+{% extends "base.html" %}
+{% block title %}Uppercase Converter{% endblock %}
 
-    <div class="centered-content">
-        <h1>Convert String to Uppercase</h1>
-
-    <form action="/touppercase" method="post">
-        <label for="inputString">Enter a string:</label>
-        <input type="text" id="inputString" name="inputString">
-        <input type="submit" value="Convert">
-    </form>
+{% block content %}
+<section class="works-section">
+    <div class="tool-box">
+        <h3>Convert String to Uppercase</h3>
+        <form method="POST">
+            <input type="text" name="inputString" placeholder="Enter a string" required>
+            <button type="submit">Convert</button>
+        </form>
 
         {% if result %}
-        <p>Converted string: {{ result }}</p>
+            <div class="result-box">
+                <p><strong>Converted string:</strong> {{ result }}</p>
+            </div>
         {% endif %}
     </div>
-
-    <footer>
-    </footer> 
-</body>
-</html>
+</section>
+{% endblock %}
